@@ -9,13 +9,18 @@ pygame.time.set_timer(TIMESPEED, 7000)
 
 
 while not game.over:
+
     for e in pygame.event.get():
+    
         if e.type == pygame.QUIT:
-            game.over = True
+        
+                 game.over = True
+            
         if e.type == pygame.USEREVENT:
-            game.spawnbaloon()
+              
+                game.spawnbaloon()
         if e.type == pygame.MOUSEBUTTONDOWN:
-            game.checkclick(e.pos)
+                game.checkclick(e.pos)
         if e.type == TIMESPEED:
             game.speedup()
     game.update()
